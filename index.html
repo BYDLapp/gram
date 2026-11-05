@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gram: kalori ve antrenman takibi</title>
+<meta name="description" content="Tahmin yok, etiket var. Kalori ve makrolar USDA&#x27;dan ve paket etiketinden gelir.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="simge.png">
+<style>
+@font-face{font-family:"Bricolage";src:url(fontlar/BricolageGrotesque.ttf) format("truetype");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+@font-face{font-family:"Instrument";src:url(fontlar/InstrumentSans.ttf) format("truetype");font-weight:400 700;font-stretch:75% 100%;font-display:swap}
+:root{--ground:#F2F4F3;--surface:#FFFFFF;--ink:#101412;--secondary:#5B625E;--rule:#D5DAD7;--mark:#FFF1A8;--paper:#F2F4F3}
+@media (prefers-color-scheme:dark){:root{--ground:#0B0D0C;--surface:#171A19;--ink:#EEF1EF;--secondary:#A3AAA6;--rule:#2B302D;--mark:#5A4B00;--paper:#0B0D0C}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.6 "Instrument",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0}
+.brand{display:flex;align-items:flex-end;gap:8px;color:var(--ink);text-decoration:none;font:800 26px/1 "Bricolage",sans-serif;letter-spacing:-.03em}
+.brand .gram{width:24px;height:26px}
+nav{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:15px}
+nav a{color:var(--secondary);text-decoration:none}
+nav a:hover,nav a[aria-current]{color:var(--ink)}
+.gram .eyes{fill:var(--paper)}
+h1,h2,.display{font-family:"Bricolage",sans-serif;letter-spacing:-.02em}
+h1{font-size:clamp(40px,9vw,64px);line-height:.95;font-weight:800;margin:28px 0 0}
+h2{font-size:26px;line-height:1.15;margin:44px 0 8px}
+h3{font-size:18px;margin:30px 0 4px}
+h4{font-size:16px;margin:22px 0 4px}
+p,li{color:var(--ink)}
+.muted{color:var(--secondary);font-size:15px}
+a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:3px}
+.rule{height:7px;background:var(--ink);border-radius:2px;margin:18px 0 22px}
+mark{background:var(--mark);color:inherit;padding:0 3px;border-radius:3px}
+code{font:inherit}
+.table{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+th{font-weight:600}
+.langs{display:flex;gap:8px;margin:8px 0 0;flex-wrap:wrap}
+.langs a{font-size:14px;text-decoration:none;padding:6px 12px;border-radius:999px;background:var(--surface)}
+section.lang{scroll-margin-top:16px}
+footer{margin:64px 0 0;padding:22px 0 40px;border-top:1px solid var(--rule);font-size:14px;color:var(--secondary)}
+footer p{color:var(--secondary);margin:4px 0}
+/* Ana sayfa */
+.hero{display:flex;flex-direction:column;align-items:center;padding:36px 0 8px}
+.hero .gram{width:120px;height:132px;animation:drop .9s cubic-bezier(.3,1.5,.5,1) both}
+.pan{width:180px;height:7px;border-radius:7px;background:var(--ink)}
+.readout{margin-top:10px;font:800 30px/1 "Bricolage",sans-serif}
+.readout span{font:500 15px "Instrument",sans-serif;color:var(--secondary);margin-left:3px}
+@keyframes drop{from{transform:translateY(-70px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero .gram{animation:none}}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:28px 0}
+.point{background:var(--surface);border-radius:20px;padding:18px}
+.point strong{display:block;font:700 19px/1.2 "Bricolage",sans-serif;margin-bottom:6px}
+.point p{margin:0;color:var(--secondary);font-size:15px;line-height:1.5}
+.soon{display:inline-block;margin-top:6px;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--ground);font-weight:600;font-size:15px}
+.faq h3{margin-top:26px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="index.html"><svg class="gram" viewBox="0 0 100 110" aria-hidden="true"><g fill="currentColor"><circle cx="50" cy="14.5" r="13.5"/><path d="M42.5 20H57.5V28Q57.5 37 70 37H30Q42.5 37 42.5 28Z"/><path d="M33 36H67C80 36 85 43 87 54C90 67 95 80 95 93C95 103 90 109 79 109H21C10 109 5 103 5 93C5 80 10 67 13 54C15 43 20 36 33 36Z"/></g><g class="eyes"><ellipse cx="39" cy="73" rx="5.5" ry="9"/><ellipse cx="61" cy="73" rx="5.5" ry="9"/></g></svg>gram</a><nav><a href="gizlilik.html">Gizlilik</a><a href="kosullar.html">Koşullar</a><a href="destek.html">Destek</a></nav></header>
+<main>
+
+<div class="hero"><svg class="gram" viewBox="0 0 100 110" aria-hidden="true"><g fill="currentColor"><circle cx="50" cy="14.5" r="13.5"/><path d="M42.5 20H57.5V28Q57.5 37 70 37H30Q42.5 37 42.5 28Z"/><path d="M33 36H67C80 36 85 43 87 54C90 67 95 80 95 93C95 103 90 109 79 109H21C10 109 5 103 5 93C5 80 10 67 13 54C15 43 20 36 33 36Z"/></g><g class="eyes"><ellipse cx="39" cy="73" rx="5.5" ry="9"/><ellipse cx="61" cy="73" rx="5.5" ry="9"/></g></svg><div class="pan"></div><div class="readout">1<span>g</span></div></div>
+<h1>Tahmin yok.<br>Etiket var.</h1>
+<div class="rule"></div>
+<p>Gram, yediklerini ve antrenmanlarını tutan sade bir iPhone uygulaması. Kalori ve makrolar fotoğraftan tahmin edilmez: USDA verisinden ve paketin etiketinden gelir.</p>
+<div class="points">
+<div class="point"><strong>100.000'den fazla besin ve ürün</strong><p>Temel besinler, sevilen yemekler, 200 tarif ve paketli ürünler. Hepsinde kaynağı yazar.</p></div>
+<div class="point"><strong>Yemek takibi ücretsiz</strong><p>Kayıt tutmak için ödeme yok. Pro, ilerlemeni ileri taşıyan araçları açar.</p></div>
+<div class="point"><strong>Reklam yok</strong><p>Reklam da, reklam ya da analiz takip aracı da yok.</p></div>
+<div class="point"><strong>Verin telefonunda</strong><p>Hesap açmazsın. Sunucumuz yok, kayıtların bize ulaşmaz.</p></div>
+</div>
+<p><span class="soon">Yakında App Store'da</span></p>
+<section lang="en"><h2>In English</h2><p>Gram is a simple iPhone app for food and workouts. Calories and macros are never guessed from a photo: they come from USDA data and the package label. Over 100,000 foods and products, free food tracking, no ads, and your data stays on your phone. Coming soon to the App Store.</p></section>
+<section lang="es"><h2>En español</h2><p>Gram es una app sencilla para iPhone para tus comidas y entrenamientos. Las calorías y los macros nunca se adivinan con una foto: vienen de los datos del USDA y de la etiqueta del paquete. Más de 100.000 alimentos y productos, seguimiento de comidas gratis, sin anuncios, y tus datos se quedan en tu teléfono. Próximamente en la App Store.</p></section>
+
+</main>
+<footer>
+<p>Gram'ı Galip Alp Demirel geliştirir · Türkiye · <a href="mailto:support@bydl.app">support@bydl.app</a></p>
+<p>Gram bir takip ve hesaplama aracıdır. Tıbbi tavsiye, teşhis ya da tedavi değildir. 18 yaş ve üzeri içindir.</p>
+</footer>
+</div>
+</body>
+</html>

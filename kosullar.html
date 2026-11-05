@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Koşullar · Gram</title>
+<meta name="description" content="Koşullar · Gram">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="simge.png">
+<style>
+@font-face{font-family:"Bricolage";src:url(fontlar/BricolageGrotesque.ttf) format("truetype");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+@font-face{font-family:"Instrument";src:url(fontlar/InstrumentSans.ttf) format("truetype");font-weight:400 700;font-stretch:75% 100%;font-display:swap}
+:root{--ground:#F2F4F3;--surface:#FFFFFF;--ink:#101412;--secondary:#5B625E;--rule:#D5DAD7;--mark:#FFF1A8;--paper:#F2F4F3}
+@media (prefers-color-scheme:dark){:root{--ground:#0B0D0C;--surface:#171A19;--ink:#EEF1EF;--secondary:#A3AAA6;--rule:#2B302D;--mark:#5A4B00;--paper:#0B0D0C}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.6 "Instrument",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0}
+.brand{display:flex;align-items:flex-end;gap:8px;color:var(--ink);text-decoration:none;font:800 26px/1 "Bricolage",sans-serif;letter-spacing:-.03em}
+.brand .gram{width:24px;height:26px}
+nav{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:15px}
+nav a{color:var(--secondary);text-decoration:none}
+nav a:hover,nav a[aria-current]{color:var(--ink)}
+.gram .eyes{fill:var(--paper)}
+h1,h2,.display{font-family:"Bricolage",sans-serif;letter-spacing:-.02em}
+h1{font-size:clamp(40px,9vw,64px);line-height:.95;font-weight:800;margin:28px 0 0}
+h2{font-size:26px;line-height:1.15;margin:44px 0 8px}
+h3{font-size:18px;margin:30px 0 4px}
+h4{font-size:16px;margin:22px 0 4px}
+p,li{color:var(--ink)}
+.muted{color:var(--secondary);font-size:15px}
+a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:3px}
+.rule{height:7px;background:var(--ink);border-radius:2px;margin:18px 0 22px}
+mark{background:var(--mark);color:inherit;padding:0 3px;border-radius:3px}
+code{font:inherit}
+.table{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+th{font-weight:600}
+.langs{display:flex;gap:8px;margin:8px 0 0;flex-wrap:wrap}
+.langs a{font-size:14px;text-decoration:none;padding:6px 12px;border-radius:999px;background:var(--surface)}
+section.lang{scroll-margin-top:16px}
+footer{margin:64px 0 0;padding:22px 0 40px;border-top:1px solid var(--rule);font-size:14px;color:var(--secondary)}
+footer p{color:var(--secondary);margin:4px 0}
+/* Ana sayfa */
+.hero{display:flex;flex-direction:column;align-items:center;padding:36px 0 8px}
+.hero .gram{width:120px;height:132px;animation:drop .9s cubic-bezier(.3,1.5,.5,1) both}
+.pan{width:180px;height:7px;border-radius:7px;background:var(--ink)}
+.readout{margin-top:10px;font:800 30px/1 "Bricolage",sans-serif}
+.readout span{font:500 15px "Instrument",sans-serif;color:var(--secondary);margin-left:3px}
+@keyframes drop{from{transform:translateY(-70px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero .gram{animation:none}}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:28px 0}
+.point{background:var(--surface);border-radius:20px;padding:18px}
+.point strong{display:block;font:700 19px/1.2 "Bricolage",sans-serif;margin-bottom:6px}
+.point p{margin:0;color:var(--secondary);font-size:15px;line-height:1.5}
+.soon{display:inline-block;margin-top:6px;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--ground);font-weight:600;font-size:15px}
+.faq h3{margin-top:26px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="index.html"><svg class="gram" viewBox="0 0 100 110" aria-hidden="true"><g fill="currentColor"><circle cx="50" cy="14.5" r="13.5"/><path d="M42.5 20H57.5V28Q57.5 37 70 37H30Q42.5 37 42.5 28Z"/><path d="M33 36H67C80 36 85 43 87 54C90 67 95 80 95 93C95 103 90 109 79 109H21C10 109 5 103 5 93C5 80 10 67 13 54C15 43 20 36 33 36Z"/></g><g class="eyes"><ellipse cx="39" cy="73" rx="5.5" ry="9"/><ellipse cx="61" cy="73" rx="5.5" ry="9"/></g></svg>gram</a><nav><a href="gizlilik.html">Gizlilik</a><a href="kosullar.html" aria-current=page>Koşullar</a><a href="destek.html">Destek</a></nav></header>
+<main>
+<h1>Kullanım koşulları</h1><div class="rule"></div><div class="langs"><a href="#tr">Türkçe</a><a href="#en">English</a><a href="#es">Español</a></div><section class="lang" id="tr" lang="tr"><h2>Kullanım Koşulları</h2>
+<p><strong>Yürürlük tarihi:</strong> 5 Kasım 2026 · <strong>Sürüm:</strong> 1.0</p>
+<h3>1. Taraflar</h3>
+<p>Bu koşullar, sen ("kullanıcı") ile Gram uygulamasını sunan Galip Alp Demirel (Türkiye, <a href="mailto:support@bydl.app">support@bydl.app</a>) arasındadır. Uygulamayı kullanarak bu koşulları kabul etmiş olursun.</p>
+<h3>2. Uygulama ne yapar</h3>
+<p>Gram, yemek, su, kilo ve antrenman kayıtlarını tutmanı sağlayan bir takip ve hesaplama aracıdır. Hedef hesapları genel formüllere, besin değerleri ise kaynağı belirtilen veritabanlarına ve paket etiketlerine dayanır.</p>
+<h3>3. Sağlık uyarısı</h3>
+<p>Uygulama <strong>tıbbi cihaz değildir</strong>. Tıbbi tavsiye, teşhis ya da tedavi sunmaz. Diyet listesi ya da kişiye özel beslenme tedavisi hazırlamaz, doktor ya da diyetisyen desteğinin yerine geçmez.</p>
+<p>Hamileysen, emziriyorsan, kronik bir hastalığın varsa, ilaç kullanıyorsan ya da yeme bozukluğu geçmişin varsa hedef belirlemeden önce doktoruna danış. Yeni bir antrenmana başlamadan önce sağlık durumunun uygun olduğundan emin ol. Bir egzersiz seni rahatsız ederse dur.</p>
+<p>Besin değerleri yaklaşık bilgidir. Ürün, marka ve pişirme farkları sonucu değiştirebilir. Alerjin ya da çölyak hastalığın varsa her zaman ürün etiketini kontrol et. Tariflerdeki "Glutensiz", "Vegan" gibi etiketler malzeme listesine göre hesaplanır, üretimdeki bulaşmayı kapsamaz.</p>
+<h3>4. Yaş</h3>
+<p>Uygulamayı kullanmak için en az 18 yaşında olmalısın.</p>
+<h3>5. Ücretsiz sürüm</h3>
+<p>Yemek takibi ve temel antrenman kaydı ücretsizdir. Uygulamada reklam gösterilmez.</p>
+<h3>6. Pro</h3>
+<p>Pro, ek özellikleri açar. Üç şekilde sunulur:</p>
+<ul><li><strong>Yıllık abonelik</strong></li><li><strong>Aylık abonelik</strong></li><li><strong>Tek seferlik Pro</strong></li></ul>
+<p>Güncel fiyatlar ve o an geçerli teklifler satın alma ekranında vergiler dahil gösterilir.</p>
+<p><strong>Seri hediyesi:</strong> 15 gün üst üste en az bir yemek, su ya da set yazana Pro 7 gün ücretsiz açılır. Kişi başı bir kez verilir. Ödeme bilgisi istenmez, abonelik başlamaz, süre dolunca kendiliğinden kapanır. Satın alma değildir, iade ya da cayma konusu olmaz.</p>
+<h3>7. Abonelik</h3>
+<p><strong>Satın alma:</strong> Abonelikler Apple App Store üzerinden, Apple hesabınla satılır. Ödeme satın alma onayıyla Apple hesabından alınır.</p>
+<p><strong>Süre:</strong> Abonelik, sen iptal edene kadar devam eder. Yıllık planda her yıl, aylık planda her ay yenilenir.</p>
+<p><strong>Otomatik yenileme:</strong> Dönem bitmeden en az 24 saat önce iptal etmezsen abonelik yenilenir ve ücret Apple hesabından alınır. Yenileme fiyatı satın alma ekranında gösterilir.</p>
+<p><strong>İlk yıl teklifi:</strong> Teklif sunulmuşsa ilk yıl belirtilen fiyatla başlar, sonraki yıllar normal yıllık fiyatla yenilenir. Teklife kimlerin uygun olduğunu Apple belirler.</p>
+<p><strong>Yenileme hatırlatması:</strong> Yıllık planda yenilemeden yaklaşık 7 gün önce uygulama içinde sana yenileme tarihini ve tutarını hatırlatırız.</p>
+<p><strong>İptal:</strong> İstediğin zaman, gerekçe göstermeden ve ceza ödemeden iptal edebilirsin. Uygulamada Profil &gt; Aboneliği yönet bağlantısını kullan ya da iPhone Ayarlar &gt; adın &gt; Abonelikler bölümüne git. İptal edersen ödenmiş dönem sonuna kadar Pro açık kalır ve yeni ücret alınmaz.</p>
+<p><strong>Fiyat değişikliği:</strong> Fiyat artarsa önceden haber veririz. Apple da gerekli gördüğü durumlarda senden onay ister. Onaylamazsan abonelik dönem sonunda sona erer.</p>
+<h3>8. Tek seferlik Pro</h3>
+<p>Tek seferlik Pro bir kez ödenir, abonelik değildir. Pro özellikleri <strong>uygulama yayında olduğu sürece</strong> açık kalır. Apple hesabınla satın alımı geri yükleyebilirsin.</p>
+<p>Uygulamayı kapatmak zorunda kalırsak:</p>
+<ul><li>En az 6 ay önceden uygulama içinde duyururuz.</li><li>Son güncellemede tüm Pro özelliklerini herkese ücretsiz açarız.</li><li>Uygulamayı en az bir ülkede satışta tutarız.</li></ul>
+<h3>9. Cayma hakkı ve iade</h3>
+<p>Pro, satın aldığın anda elektronik ortamda açılır. Mesafeli Sözleşmeler Yönetmeliği m.15 uyarınca, elektronik ortamda anında ifa edilen hizmetlerde ve tüketicinin onayıyla ifasına başlanan hizmetlerde cayma hakkı kullanılamaz. Satın alırken Pro'nun hemen başlamasını onaylamış olursun.</p>
+<p>Ödemeleri Apple tahsil ettiği için iade taleplerini Apple'a iletirsin: <a href="https://reportaproblem.apple.com.">reportaproblem.apple.com.</a> Bu madde, yasadan doğan haklarını ortadan kaldırmaz.</p>
+<h3>10. Uyuşmazlık</h3>
+<p>Yürürlükteki parasal sınırlar içinde Tüketici Hakem Heyetlerine, bu sınırların üzerinde Tüketici Mahkemelerine başvurabilirsin. Önce bize yazarsan sorunu hızlıca çözmeye çalışırız.</p>
+<h3>11. Hizmette kusur ve kesinti</h3>
+<p>Uygulama telefonunda çalışır, internet olmadan da kullanılabilir. Sunulan hizmette bizden kaynaklanan bir ayıp olursa 6502 sayılı Kanun'un 15. maddesindeki hakların saklıdır. Apple'ın servislerindeki ya da telefonundaki sorunlar gibi bizim kontrolümüz dışındaki durumlardan sorumlu değiliz.</p>
+<h3>12. Fikri haklar</h3>
+<p>Uygulamanın tasarımı, kodu, tarif metinleri ve içeriği bize aittir ya da lisanslıdır. Besin verisi kaynakları ve lisanslar uygulamadaki Lisanslar sayfasında listelenir. Kendi girdiğin veriler sana aittir.</p>
+<h3>13. Sorumluluk</h3>
+<p>Uygulamayı kendi kararınla kullanırsın. Yasanın izin verdiği ölçüde, uygulamadaki bilgilerin tıbbi amaçla kullanılmasından doğan zararlardan sorumlu değiliz. Bu madde tüketici olarak yasadan doğan haklarını sınırlamaz.</p>
+<h3>14. Değişiklikler</h3>
+<p>Bu koşulları güncelleyebiliriz. Önemli bir değişiklikte uygulama içinde haber veririz. Var olan abonelikte aleyhine bir değişiklik olursa aboneliğini iptal etme hakkın saklıdır.</p>
+<h3>15. Geçerli hukuk</h3>
+<p>Bu koşullara Türk hukuku uygulanır. Yaşadığın ülkenin zorunlu tüketici hakları saklıdır.</p></section><section class="lang" id="en" lang="en"><h2>Terms of Use</h2>
+<p><strong>Effective date:</strong> 5 November 2026 · <strong>Version:</strong> 1.0</p>
+<h3>1. Parties</h3>
+<p>These terms are between you ("user") and Galip Alp Demirel (Türkiye, <a href="mailto:support@bydl.app">support@bydl.app</a>), who provides Gram. By using the app you accept these terms.</p>
+<h3>2. What the app does</h3>
+<p>Gram is a tracking and calculation tool for logging food, water, weight and workouts. Targets rely on general formulas. Nutrition values rely on the databases named in the app and on product labels.</p>
+<h3>3. Health notice</h3>
+<p>The app is <strong>not a medical device</strong>. It provides no medical advice, diagnosis or treatment. It does not prepare diet plans or personal nutrition therapy and doesn't replace a doctor or dietitian.</p>
+<p>If you are pregnant, breastfeeding, have a chronic condition, take medication or have a history of eating disorders, talk to your doctor before setting targets. Make sure your health allows it before starting a new training routine. Stop if an exercise feels wrong.</p>
+<p>Nutrition values are approximate and vary with product, brand and cooking. If you have an allergy or coeliac disease, always check the product label. Recipe labels such as "Gluten-free" or "Vegan" come from the ingredient list and don't cover cross-contamination.</p>
+<h3>4. Age</h3>
+<p>You must be at least 18 to use the app.</p>
+<h3>5. Free version</h3>
+<p>Food tracking and basic workout logging are free. The app shows no ads.</p>
+<h3>6. Pro</h3>
+<p>Pro unlocks additional features and comes in three forms:</p>
+<ul><li><strong>Annual subscription</strong></li><li><strong>Monthly subscription</strong></li><li><strong>Pro: one-time purchase</strong></li></ul>
+<p>Current prices and offers are shown on the purchase screen, including taxes.</p>
+<p><strong>Streak gift:</strong> If you log at least one food, glass of water or set 15 days in a row, Pro opens free for 7 days. It is given once per person. No payment details are asked for, no subscription starts, and it ends by itself. It isn't a purchase, so refunds and withdrawal don't apply.</p>
+<h3>7. Subscriptions</h3>
+<p><strong>Purchase:</strong> Subscriptions are sold through the Apple App Store with your Apple Account. Payment is charged to your Apple Account when you confirm.</p>
+<p><strong>Term:</strong> Your subscription continues until you cancel. It renews every year on the annual plan and every month on the monthly plan.</p>
+<p><strong>Auto-renewal:</strong> Unless you cancel at least 24 hours before the period ends, your subscription renews and your Apple Account is charged. The renewal price is shown on the purchase screen.</p>
+<p><strong>First-year offer:</strong> If an offer is shown, the first year starts at that price and later years renew at the standard annual price. Apple decides who is eligible.</p>
+<p><strong>Renewal reminder:</strong> On the annual plan, we remind you of the date and amount in the app about 7 days before renewal.</p>
+<p><strong>Cancelling:</strong> You can cancel at any time, without giving a reason and without penalty. Use Profile &gt; Manage subscription, or go to iPhone Settings &gt; your name &gt; Subscriptions. After you cancel, Pro stays active until the paid period ends and you aren't charged again.</p>
+<p><strong>Price changes:</strong> We'll tell you in advance if a price goes up. Apple may also ask for your consent where required. If you don't accept, the subscription ends at the end of the period.</p>
+<h3>8. Pro: one-time purchase</h3>
+<p>This is paid once and is not a subscription. Pro features stay active <strong>for as long as the app is available</strong>. You can restore your purchase with your Apple Account.</p>
+<p>If we ever have to shut the app down, we will:</p>
+<ul><li>Announce it in the app at least 6 months in advance.</li><li>Unlock all Pro features for everyone in the final update.</li><li>Keep the app on sale in at least one country.</li></ul>
+<h3>9. Withdrawal and refunds</h3>
+<p>Pro is activated electronically as soon as you buy. By buying, you agree that Pro starts immediately. Under Turkish consumer rules, the right of withdrawal doesn't apply to services performed instantly online. If you live in the European Union, your mandatory consumer rights still apply.</p>
+<p>Because Apple collects payments, refund requests go to Apple: <a href="https://reportaproblem.apple.com.">reportaproblem.apple.com.</a> Nothing here removes rights you have by law.</p>
+<h3>10. Disputes</h3>
+<p>Please write to us first so we can try to fix the issue quickly. You may also apply to the consumer bodies and courts available where you live. In Türkiye these are the Consumer Arbitration Committees and Consumer Courts.</p>
+<h3>11. Faults and interruptions</h3>
+<p>The app runs on your phone and works offline. Your legal rights for defective services remain unaffected. We aren't responsible for events outside our control, such as problems with Apple services or your device.</p>
+<h3>12. Intellectual property</h3>
+<p>The app's design, code, recipe texts and content belong to us or are licensed to us. Data sources and licences are listed on the Licences page in the app. The data you enter is yours.</p>
+<h3>13. Liability</h3>
+<p>You use the app at your own discretion. To the extent the law allows, we aren't liable for damage caused by using information in the app for medical purposes. Nothing here limits your statutory consumer rights.</p>
+<h3>14. Changes</h3>
+<p>We may update these terms and will notify you in the app about important changes. If a change is to your disadvantage, you can still cancel your subscription.</p>
+<h3>15. Governing law</h3>
+<p>Turkish law applies, without affecting mandatory consumer rights in your country of residence.</p></section><section class="lang" id="es" lang="es"><h2>Condiciones de uso</h2>
+<p><strong>Fecha de vigencia:</strong> 5 de noviembre de 2026 · <strong>Versión:</strong> 1.0</p>
+<h3>1. Partes</h3>
+<p>Estas condiciones son entre tú ("usuario") y Galip Alp Demirel (Turquía, <a href="mailto:support@bydl.app">support@bydl.app</a>), que ofrece Gram. Al usar la app, aceptas estas condiciones.</p>
+<h3>2. Qué hace la app</h3>
+<p>Gram es una herramienta de seguimiento y cálculo para registrar comidas, agua, peso y entrenamientos. Los objetivos se basan en fórmulas generales. Los valores nutricionales se basan en las bases de datos indicadas en la app y en las etiquetas de los productos.</p>
+<h3>3. Aviso de salud</h3>
+<p>La app <strong>no es un producto sanitario</strong>. No ofrece consejo médico, diagnóstico ni tratamiento. No prepara dietas ni terapia nutricional personalizada y no sustituye a un médico o dietista.</p>
+<p>Si estás embarazada, das el pecho, tienes una enfermedad crónica, tomas medicación o tienes antecedentes de trastornos alimentarios, consulta a tu médico antes de fijar objetivos. Asegúrate de que tu salud te lo permite antes de empezar una rutina nueva. Detente si un ejercicio te sienta mal.</p>
+<p>Los valores nutricionales son aproximados y varían según el producto, la marca y la cocción. Si tienes una alergia o celiaquía, revisa siempre la etiqueta. Las etiquetas de recetas como "Sin gluten" o "Vegano" se basan en la lista de ingredientes y no cubren la contaminación cruzada.</p>
+<h3>4. Edad</h3>
+<p>Debes tener al menos 18 años para usar la app.</p>
+<h3>5. Versión gratuita</h3>
+<p>El seguimiento de comidas y el registro básico de entrenamientos son gratuitos. La app no muestra anuncios.</p>
+<h3>6. Pro</h3>
+<p>Pro desbloquea funciones adicionales y se ofrece de tres formas:</p>
+<ul><li><strong>Suscripción anual</strong></li><li><strong>Suscripción mensual</strong></li><li><strong>Pro: pago único</strong></li></ul>
+<p>Los precios y ofertas vigentes se muestran en la pantalla de compra, con impuestos incluidos.</p>
+<p><strong>Regalo de racha:</strong> Si registras al menos una comida, un vaso de agua o una serie 15 días seguidos, Pro se abre gratis durante 7 días. Se da una vez por persona. No se piden datos de pago, no empieza ninguna suscripción y termina por sí solo. No es una compra, así que no aplican reembolsos ni desistimiento.</p>
+<h3>7. Suscripciones</h3>
+<p><strong>Compra:</strong> Las suscripciones se venden en el App Store de Apple con tu cuenta de Apple. El cobro se realiza en tu cuenta de Apple al confirmar.</p>
+<p><strong>Duración:</strong> La suscripción continúa hasta que la canceles. Se renueva cada año en el plan anual y cada mes en el plan mensual.</p>
+<p><strong>Renovación automática:</strong> Si no cancelas al menos 24 horas antes de que termine el periodo, la suscripción se renueva y se cobra en tu cuenta de Apple. El precio de renovación se muestra en la pantalla de compra.</p>
+<p><strong>Oferta del primer año:</strong> Si se muestra una oferta, el primer año empieza con ese precio y los años siguientes se renuevan al precio anual normal. Apple decide quién puede acceder a ella.</p>
+<p><strong>Recordatorio de renovación:</strong> En el plan anual, te recordamos la fecha y el importe en la app unos 7 días antes de la renovación.</p>
+<p><strong>Cancelación:</strong> Puedes cancelar cuando quieras, sin dar motivos y sin penalización. Usa Perfil &gt; Gestionar suscripción o ve a Ajustes del iPhone &gt; tu nombre &gt; Suscripciones. Si cancelas, Pro sigue activo hasta el final del periodo pagado y no se te vuelve a cobrar.</p>
+<p><strong>Cambios de precio:</strong> Te avisaremos con antelación si un precio sube. Apple también puede pedir tu consentimiento cuando sea necesario. Si no lo aceptas, la suscripción termina al final del periodo.</p>
+<h3>8. Pro: pago único</h3>
+<p>Se paga una vez y no es una suscripción. Las funciones Pro siguen activas <strong>mientras la app esté disponible</strong>. Puedes restaurar tu compra con tu cuenta de Apple.</p>
+<p>Si alguna vez tuviéramos que cerrar la app:</p>
+<ul><li>Lo anunciaremos en la app con al menos 6 meses de antelación.</li><li>Desbloquearemos todas las funciones Pro para todos en la última actualización.</li><li>Mantendremos la app a la venta en al menos un país.</li></ul>
+<h3>9. Desistimiento y reembolsos</h3>
+<p>Pro se activa electrónicamente en el momento de la compra. Al comprar, aceptas que Pro empiece de inmediato. Según la normativa turca de consumo, el derecho de desistimiento no se aplica a servicios ejecutados al instante por medios electrónicos. Si vives en la Unión Europea, tus derechos obligatorios de consumidor siguen vigentes.</p>
+<p>Como Apple cobra los pagos, las solicitudes de reembolso se hacen a Apple: <a href="https://reportaproblem.apple.com.">reportaproblem.apple.com.</a> Nada de esto elimina los derechos que te da la ley.</p>
+<h3>10. Disputas</h3>
+<p>Escríbenos primero para intentar resolverlo rápido. También puedes acudir a los organismos y tribunales de consumo de tu lugar de residencia.</p>
+<h3>11. Fallos e interrupciones</h3>
+<p>La app funciona en tu teléfono y también sin conexión. Tus derechos legales por servicios defectuosos no se ven afectados. No somos responsables de hechos fuera de nuestro control, como problemas de los servicios de Apple o de tu dispositivo.</p>
+<h3>12. Propiedad intelectual</h3>
+<p>El diseño, el código, los textos de recetas y el contenido de la app nos pertenecen o están licenciados. Las fuentes de datos y licencias aparecen en la página Licencias de la app. Los datos que introduces son tuyos.</p>
+<h3>13. Responsabilidad</h3>
+<p>Usas la app bajo tu propio criterio. En la medida en que la ley lo permita, no respondemos de los daños por usar la información de la app con fines médicos. Nada de esto limita tus derechos legales como consumidor.</p>
+<h3>14. Cambios</h3>
+<p>Podemos actualizar estas condiciones y te avisaremos en la app de los cambios importantes. Si un cambio te perjudica, siempre puedes cancelar tu suscripción.</p>
+<h3>15. Ley aplicable</h3>
+<p>Se aplica la ley turca, sin perjuicio de los derechos obligatorios de consumidor de tu país de residencia.</p></section>
+</main>
+<footer>
+<p>Gram'ı Galip Alp Demirel geliştirir · Türkiye · <a href="mailto:support@bydl.app">support@bydl.app</a></p>
+<p>Gram bir takip ve hesaplama aracıdır. Tıbbi tavsiye, teşhis ya da tedavi değildir. 18 yaş ve üzeri içindir.</p>
+</footer>
+</div>
+</body>
+</html>

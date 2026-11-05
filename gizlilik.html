@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gizlilik · Gram</title>
+<meta name="description" content="Gizlilik · Gram">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="simge.png">
+<style>
+@font-face{font-family:"Bricolage";src:url(fontlar/BricolageGrotesque.ttf) format("truetype");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+@font-face{font-family:"Instrument";src:url(fontlar/InstrumentSans.ttf) format("truetype");font-weight:400 700;font-stretch:75% 100%;font-display:swap}
+:root{--ground:#F2F4F3;--surface:#FFFFFF;--ink:#101412;--secondary:#5B625E;--rule:#D5DAD7;--mark:#FFF1A8;--paper:#F2F4F3}
+@media (prefers-color-scheme:dark){:root{--ground:#0B0D0C;--surface:#171A19;--ink:#EEF1EF;--secondary:#A3AAA6;--rule:#2B302D;--mark:#5A4B00;--paper:#0B0D0C}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.6 "Instrument",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0}
+.brand{display:flex;align-items:flex-end;gap:8px;color:var(--ink);text-decoration:none;font:800 26px/1 "Bricolage",sans-serif;letter-spacing:-.03em}
+.brand .gram{width:24px;height:26px}
+nav{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:15px}
+nav a{color:var(--secondary);text-decoration:none}
+nav a:hover,nav a[aria-current]{color:var(--ink)}
+.gram .eyes{fill:var(--paper)}
+h1,h2,.display{font-family:"Bricolage",sans-serif;letter-spacing:-.02em}
+h1{font-size:clamp(40px,9vw,64px);line-height:.95;font-weight:800;margin:28px 0 0}
+h2{font-size:26px;line-height:1.15;margin:44px 0 8px}
+h3{font-size:18px;margin:30px 0 4px}
+h4{font-size:16px;margin:22px 0 4px}
+p,li{color:var(--ink)}
+.muted{color:var(--secondary);font-size:15px}
+a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:3px}
+.rule{height:7px;background:var(--ink);border-radius:2px;margin:18px 0 22px}
+mark{background:var(--mark);color:inherit;padding:0 3px;border-radius:3px}
+code{font:inherit}
+.table{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+th{font-weight:600}
+.langs{display:flex;gap:8px;margin:8px 0 0;flex-wrap:wrap}
+.langs a{font-size:14px;text-decoration:none;padding:6px 12px;border-radius:999px;background:var(--surface)}
+section.lang{scroll-margin-top:16px}
+footer{margin:64px 0 0;padding:22px 0 40px;border-top:1px solid var(--rule);font-size:14px;color:var(--secondary)}
+footer p{color:var(--secondary);margin:4px 0}
+/* Ana sayfa */
+.hero{display:flex;flex-direction:column;align-items:center;padding:36px 0 8px}
+.hero .gram{width:120px;height:132px;animation:drop .9s cubic-bezier(.3,1.5,.5,1) both}
+.pan{width:180px;height:7px;border-radius:7px;background:var(--ink)}
+.readout{margin-top:10px;font:800 30px/1 "Bricolage",sans-serif}
+.readout span{font:500 15px "Instrument",sans-serif;color:var(--secondary);margin-left:3px}
+@keyframes drop{from{transform:translateY(-70px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero .gram{animation:none}}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:28px 0}
+.point{background:var(--surface);border-radius:20px;padding:18px}
+.point strong{display:block;font:700 19px/1.2 "Bricolage",sans-serif;margin-bottom:6px}
+.point p{margin:0;color:var(--secondary);font-size:15px;line-height:1.5}
+.soon{display:inline-block;margin-top:6px;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--ground);font-weight:600;font-size:15px}
+.faq h3{margin-top:26px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="index.html"><svg class="gram" viewBox="0 0 100 110" aria-hidden="true"><g fill="currentColor"><circle cx="50" cy="14.5" r="13.5"/><path d="M42.5 20H57.5V28Q57.5 37 70 37H30Q42.5 37 42.5 28Z"/><path d="M33 36H67C80 36 85 43 87 54C90 67 95 80 95 93C95 103 90 109 79 109H21C10 109 5 103 5 93C5 80 10 67 13 54C15 43 20 36 33 36Z"/></g><g class="eyes"><ellipse cx="39" cy="73" rx="5.5" ry="9"/><ellipse cx="61" cy="73" rx="5.5" ry="9"/></g></svg>gram</a><nav><a href="gizlilik.html" aria-current=page>Gizlilik</a><a href="kosullar.html">Koşullar</a><a href="destek.html">Destek</a></nav></header>
+<main>
+<h1>Gizlilik</h1><div class="rule"></div><div class="langs"><a href="#tr">Türkçe</a><a href="#en">English</a><a href="#es">Español</a></div><section class="lang" id="tr" lang="tr"><h2>Gizlilik Politikası ve KVKK Aydınlatma Metni</h2>
+<p><strong>Son güncelleme:</strong> 5 Kasım 2026</p>
+<h3>Kısaca</h3>
+<ul><li>Hesap açmıyorsun.</li><li>Yediklerin, kilon, ölçülerin ve antrenmanların telefonunda kalır.</li><li>Sunucumuz yok. Bu bilgiler bize ulaşmaz, biz göremeyiz.</li><li>Reklam yok. Reklam ya da analiz takip aracı yok.</li><li>Verilerini satmıyoruz, paylaşmıyoruz.</li></ul>
+<h3>1. Biz kimiz</h3>
+<p>Gram uygulamasını Galip Alp Demirel (Türkiye) geliştirir ve sunar. Bize <a href="mailto:support@bydl.app">support@bydl.app</a> adresinden ulaşabilirsin.</p>
+<h3>2. Telefonunda tutulan bilgiler</h3>
+<p>Aşağıdaki bilgileri sen girersin. Bunlar yalnızca telefonunda saklanır, bize gönderilmez:</p>
+<ul><li>Doğum yılı, boy, kilo, cinsiyet tercihi ve hedeflerin</li><li>Yemek günlüğün, su kayıtların, kendi ürünlerin ve tariflerin</li><li>Kilo geçmişin, vücut ölçülerin, ilerleme fotoğrafların</li><li>Antrenman rutinlerin ve kayıtların</li><li>Gram'ın sana seslendiği ad (istersen boş bırakırsın), serin ve rozetlerin</li><li>Uygulama tercihlerin</li></ul>
+<p>Bu bilgilerin bir kısmı sağlık verisi sayılabilir. Bu yüzden onları telefonunun dışına çıkarmıyoruz.</p>
+<p>Bu bilgiler hedeflerini hesaplamak, geçmişini göstermek ve ilerlemeni izlemek için kullanılır. Tüm hesaplar telefonunda yapılır.</p>
+<h3>3. Apple Sağlık (isteğe bağlı)</h3>
+<p>Apple Sağlık bağlantısını açarsan, senin izin verdiğin kadarıyla:</p>
+<ul><li><strong>Okuruz:</strong> doğum tarihi, cinsiyet, boy, kilo, adım ve hareket verileri. Amacı onboarding sorularını doldurmak ve hedeflerini hesaplamaktır.</li><li><strong>Yazarız:</strong> kilo, yemek kayıtlarının enerji ve besin değerleri, antrenmanların.</li></ul>
+<p>İzinleri istediğin zaman iPhone'unda Ayarlar &gt; Sağlık &gt; Veri Erişimi ve Aygıtlar bölümünden değiştirebilirsin. Apple Sağlık verilerini reklam ya da pazarlama için kullanmayız, kimseyle paylaşmayız, iCloud'a yazmayız.</p>
+<h3>4. Telefonundan çıkabilecek bilgiler</h3>
+<p>Aşağıdaki durumlar senin seçimin ya da Apple'ın hizmetidir. Biz bu verileri görmeyiz.</p>
+<div class="table"><table><thead><tr><th>Durum</th><th>Ne olur</th><th>Kim sorumlu</th></tr></thead><tbody><tr><td>Satın alma</td><td>Ödeme App Store üzerinden yapılır. Kart bilgini görmeyiz. Telefonun Apple'dan yalnızca Pro'nun açık olup olmadığını öğrenir.</td><td>Apple</td></tr><tr><td>Telefon yedeği</td><td>iCloud Yedekleme ya da bilgisayar yedeği açıksa uygulama verileri telefonun genel yedeğine girebilir.</td><td>Apple ve senin ayarın</td></tr><tr><td>Yedek dosyası</td><td>Uygulamadan şifreli yedek dosyası oluşturabilirsin. Dosyanın nereye kaydedileceğini sen seçersin.</td><td>Sen</td></tr><tr><td>Apple Sağlık</td><td>Apple Sağlık, verilerini Apple'ın kendi kurallarına göre cihazlar arasında eşitleyebilir.</td><td>Apple</td></tr><tr><td>İçerik indirme</td><td>Egzersiz videosu gibi içerikler gerekirse Apple'ın sunucularından iner. Bu indirmeyle kişisel bilgi göndermeyiz.</td><td>Apple</td></tr></tbody></table></div>
+<h3>5. Bize ulaşan tek bilgi: destek e-postan</h3>
+<p>Bize e-posta yazarsan e-posta adresini ve yazdıklarını görürüz.</p>
+<ul><li><strong>Amaç:</strong> Sorunu çözmek ve sana cevap vermek</li><li><strong>Hukuki sebep:</strong> Sözleşmenin ifası ve meşru menfaat (KVKK m.5/2-c ve f)</li><li><strong>Saklama:</strong> Konu çözüldükten sonra en fazla 2 yıl</li><li><strong>Yurt dışı:</strong> E-posta altyapımız Proton AG (Proton Mail) tarafından sağlanır ve sunucuları İsviçre içinde bulunabilir. Bize e-posta göndermeyi seçtiğinde iletin bu altyapıdan geçer.</li></ul>
+<p>Lütfen e-postalarında sağlık bilgisi, kimlik ya da ödeme bilgisi paylaşma.</p>
+<h3>6. Toplamadığımız bilgiler</h3>
+<p>Konumunu, rehberini, reklam kimliğini ve uygulama içinde ne yaptığını toplamıyoruz. Üçüncü taraf reklam, analiz ya da takip aracı kullanmıyoruz. Uygulamalar arasında seni takip etmiyoruz.</p>
+<h3>7. Yaş sınırı</h3>
+<p>Uygulama 18 yaş ve üzeri içindir. Hesaplamalar yetişkinler için geçerli formüllere dayanır.</p>
+<h3>8. Güvenlik</h3>
+<p>Verilerin iPhone'unun şifreleme korumasıyla saklanır. Telefonunda ekran kilidi kullanman bu korumanın temelidir. Yedek dosyası, senin belirlediğin parolayla şifrelenir. Parolayı biz bilmeyiz, unutursan dosyayı açamayız.</p>
+<h3>9. Silme</h3>
+<ul><li><strong>Uygulamadaki veriler:</strong> Profil &gt; Tüm verilerimi sil. Uygulamayı telefondan kaldırmak da bu verileri siler.</li><li><strong>Seri hediyesi işareti:</strong> 15 günlük seri hediyesi verildiğinde telefonun anahtar zincirine tek bir işaret yazılır: "hediye verildi". Adını, tarihi ya da başka bir bilgini içermez, telefondan çıkmaz, iCloud ile eşitlenmez ve biz göremeyiz. Hediye kişi başı bir kez verildiği için bu işaret verilerini silince ya da uygulamayı kaldırınca da telefonda kalır.</li><li><strong>Apple Sağlık'a yazılanlar:</strong> Sağlık uygulamasından silinir.</li><li><strong>Yedekler:</strong> Telefon yedeklerini ve kendi oluşturduğun dosyaları sen silersin.</li><li><strong>Destek e-postaları:</strong> Bize yazarak silinmesini isteyebilirsin.</li></ul>
+<p>Onayını istediğin zaman geri alabilirsin: Apple Sağlık iznini kapatabilir ya da verilerini silebilirsin.</p>
+<h3>10. Hakların</h3>
+<p>KVKK m.11 kapsamında kişisel verilerinin işlenip işlenmediğini öğrenme, düzeltilmesini ya da silinmesini isteme ve şikâyet etme hakların var. Telefonundaki verileri biz göremediğimiz için bunların çoğunu uygulama içinden kendin yapabilirsin. Destek e-postaların için bize yazabilirsin, en geç 30 gün içinde cevap veririz. Sonuçtan memnun kalmazsan Kişisel Verileri Koruma Kurulu'na başvurabilirsin.</p>
+<p>Avrupa Birliği'ndeysen GDPR kapsamında erişim, düzeltme, silme, itiraz ve taşınabilirlik hakların vardır, ülkendeki veri koruma kurumuna şikâyette bulunabilirsin.</p>
+<h3>11. Değişiklikler</h3>
+<p>Veri akışında bir değişiklik yaparsak bunu değişiklik uygulanmadan önce uygulama içinde sana bildiririz.</p>
+<h3>12. İletişim</h3>
+<p>Galip Alp Demirel, Türkiye · <a href="mailto:support@bydl.app">support@bydl.app</a></p></section><section class="lang" id="en" lang="en"><h2>Privacy Policy</h2>
+<p><strong>Last updated:</strong> 5 November 2026</p>
+<h3>In short</h3>
+<ul><li>You don't create an account.</li><li>What you eat, your weight, your measurements and your workouts stay on your phone.</li><li>We have no servers. This information never reaches us and we can't see it.</li><li>No ads. No advertising or analytics trackers.</li><li>We don't sell or share your data.</li></ul>
+<h3>1. Who we are</h3>
+<p>Gram is developed and provided by Galip Alp Demirel (Türkiye). You can reach us at <a href="mailto:support@bydl.app">support@bydl.app</a>.</p>
+<h3>2. Information kept on your phone</h3>
+<p>You enter the information below. It is stored only on your phone and is never sent to us:</p>
+<ul><li>Birth year, height, weight, sex preference and goals</li><li>Your food diary, water log, custom foods and recipes</li><li>Weight history, body measurements, progress photos</li><li>Workout routines and logs</li><li>The name Gram calls you (you can leave it empty), your streak and badges</li><li>App preferences</li></ul>
+<p>Some of this may count as health data, which is why we keep it on your device.</p>
+<p>It is used to calculate your targets, show your history and track your progress. All calculations happen on your phone.</p>
+<h3>3. Apple Health (optional)</h3>
+<p>If you connect Apple Health, and only to the extent you allow, we:</p>
+<ul><li><strong>Read:</strong> date of birth, sex, height, weight, steps and activity data, to fill in setup questions and calculate your targets.</li><li><strong>Write:</strong> weight, the energy and nutrients of your food entries, and your workouts.</li></ul>
+<p>You can change these permissions at any time in iPhone Settings &gt; Health &gt; Data Access &amp; Devices. We never use Apple Health data for advertising or marketing, never share it, and never store it in iCloud.</p>
+<h3>4. When information can leave your phone</h3>
+<p>The cases below are your choice or an Apple service. We don't see this data.</p>
+<div class="table"><table><thead><tr><th>Case</th><th>What happens</th><th>Who is responsible</th></tr></thead><tbody><tr><td>Purchases</td><td>Payment goes through the App Store. We never see your card. Your phone only learns from Apple whether Pro is active.</td><td>Apple</td></tr><tr><td>Device backup</td><td>If iCloud Backup or a computer backup is on, app data can be part of your phone's general backup.</td><td>Apple and your settings</td></tr><tr><td>Backup file</td><td>You can create an encrypted backup file. You choose where it is saved.</td><td>You</td></tr><tr><td>Apple Health</td><td>Apple Health may sync your data across devices under Apple's own terms.</td><td>Apple</td></tr><tr><td>Content downloads</td><td>Content such as exercise videos may download from Apple's servers. We send no personal information with these downloads.</td><td>Apple</td></tr></tbody></table></div>
+<h3>5. The only information that reaches us: your support emails</h3>
+<p>If you email us, we see your email address and what you write.</p>
+<ul><li><strong>Purpose:</strong> To solve your issue and reply</li><li><strong>Legal basis:</strong> Performance of a contract and legitimate interest</li><li><strong>Retention:</strong> Up to 2 years after the issue is resolved</li><li><strong>International transfer:</strong> Our email is provided by Proton AG (Proton Mail) and its servers may be in Switzerland. Your message passes through this service when you choose to email us.</li></ul>
+<p>Please don't include health, identity or payment details in your emails.</p>
+<h3>6. What we don't collect</h3>
+<p>We don't collect your location, contacts, advertising identifier or what you do in the app. We use no third-party advertising, analytics or tracking tools. We don't track you across apps.</p>
+<h3>7. Age limit</h3>
+<p>The app is for people aged 18 and over. Calculations rely on formulas intended for adults.</p>
+<h3>8. Security</h3>
+<p>Your data is protected by your iPhone's encryption. Using a screen lock is the foundation of that protection. Backup files are encrypted with a password you set. We don't know this password, so a file can't be opened if you forget it.</p>
+<h3>9. Deletion</h3>
+<ul><li><strong>Data in the app:</strong> Profile &gt; Delete all my data. Removing the app also deletes it.</li><li><strong>Streak gift mark:</strong> When the 15-day streak gift is given, a single mark is written to your phone's keychain: "gift given". It holds no name, date or other information about you, never leaves your phone, doesn't sync with iCloud, and we can't see it. Because the gift is given once per person, the mark stays on the phone after you delete your data or remove the app.</li><li><strong>Data written to Apple Health:</strong> Delete it in the Health app.</li><li><strong>Backups:</strong> You delete your device backups and the files you created.</li><li><strong>Support emails:</strong> Write to us to request deletion.</li></ul>
+<p>You can withdraw your consent at any time by turning off Apple Health access or deleting your data.</p>
+<h3>10. Your rights</h3>
+<p>Under Turkish data protection law (KVKK Art. 11) and, if you are in the European Union, the GDPR, you have rights of access, correction, deletion, objection and portability, and you may complain to your data protection authority. Since we can't see the data on your phone, you can do most of this yourself in the app. For support emails, write to us and we will reply within 30 days at the latest.</p>
+<h3>11. Changes</h3>
+<p>If we change how data flows, we will tell you in the app before the change takes effect.</p>
+<h3>12. Contact</h3>
+<p>Galip Alp Demirel, Türkiye · <a href="mailto:support@bydl.app">support@bydl.app</a></p></section><section class="lang" id="es" lang="es"><h2>Política de privacidad</h2>
+<p><strong>Última actualización:</strong> 5 de noviembre de 2026</p>
+<h3>En resumen</h3>
+<ul><li>No creas ninguna cuenta.</li><li>Lo que comes, tu peso, tus medidas y tus entrenamientos se quedan en tu teléfono.</li><li>No tenemos servidores. Esta información nunca nos llega y no podemos verla.</li><li>Sin anuncios. Sin herramientas de publicidad ni de analítica.</li><li>No vendemos ni compartimos tus datos.</li></ul>
+<h3>1. Quiénes somos</h3>
+<p>Gram está desarrollada y ofrecida por Galip Alp Demirel (Turquía). Puedes escribirnos a <a href="mailto:support@bydl.app">support@bydl.app</a>.</p>
+<h3>2. Información que se guarda en tu teléfono</h3>
+<p>Tú introduces la información siguiente. Se guarda solo en tu teléfono y nunca se nos envía:</p>
+<ul><li>Año de nacimiento, altura, peso, preferencia de sexo y objetivos</li><li>Tu diario de comidas, registro de agua, productos y recetas propias</li><li>Historial de peso, medidas corporales, fotos de progreso</li><li>Rutinas y registros de entrenamiento</li><li>El nombre con el que te llama Gram (puedes dejarlo vacío), tu racha y tus insignias</li><li>Preferencias de la app</li></ul>
+<p>Parte de esta información puede considerarse dato de salud. Por eso la mantenemos en tu dispositivo.</p>
+<p>Se usa para calcular tus objetivos, mostrar tu historial y seguir tu progreso. Todos los cálculos se hacen en tu teléfono.</p>
+<h3>3. Apple Salud (opcional)</h3>
+<p>Si conectas Apple Salud, y solo en la medida en que lo permitas:</p>
+<ul><li><strong>Leemos:</strong> fecha de nacimiento, sexo, altura, peso, pasos y datos de actividad, para completar las preguntas iniciales y calcular tus objetivos.</li><li><strong>Escribimos:</strong> peso, energía y nutrientes de tus comidas, y tus entrenamientos.</li></ul>
+<p>Puedes cambiar estos permisos en cualquier momento en Ajustes del iPhone &gt; Salud &gt; Acceso a datos y dispositivos. Nunca usamos los datos de Apple Salud para publicidad o marketing, nunca los compartimos y nunca los guardamos en iCloud.</p>
+<h3>4. Cuándo puede salir información de tu teléfono</h3>
+<p>Los casos siguientes son decisión tuya o un servicio de Apple. Nosotros no vemos estos datos.</p>
+<div class="table"><table><thead><tr><th>Caso</th><th>Qué ocurre</th><th>Responsable</th></tr></thead><tbody><tr><td>Compras</td><td>El pago se hace en el App Store. Nunca vemos tu tarjeta. Tu teléfono solo sabe por Apple si Pro está activo.</td><td>Apple</td></tr><tr><td>Copia del dispositivo</td><td>Si la copia de iCloud o de ordenador está activada, los datos de la app pueden formar parte de la copia general del teléfono.</td><td>Apple y tus ajustes</td></tr><tr><td>Archivo de copia</td><td>Puedes crear un archivo de copia cifrado. Tú eliges dónde se guarda.</td><td>Tú</td></tr><tr><td>Apple Salud</td><td>Apple Salud puede sincronizar tus datos entre dispositivos según las condiciones de Apple.</td><td>Apple</td></tr><tr><td>Descarga de contenido</td><td>Contenidos como vídeos de ejercicios pueden descargarse de los servidores de Apple. No enviamos información personal con estas descargas.</td><td>Apple</td></tr></tbody></table></div>
+<h3>5. La única información que nos llega: tus correos de soporte</h3>
+<p>Si nos escribes, vemos tu dirección de correo y lo que nos cuentas.</p>
+<ul><li><strong>Finalidad:</strong> Resolver tu consulta y responderte</li><li><strong>Base legal:</strong> Ejecución de un contrato e interés legítimo</li><li><strong>Conservación:</strong> Hasta 2 años después de resolver el asunto</li><li><strong>Transferencia internacional:</strong> Nuestro correo lo presta Proton AG (Proton Mail) y sus servidores pueden estar en Suiza. Tu mensaje pasa por este servicio cuando decides escribirnos.</li></ul>
+<p>Por favor, no incluyas datos de salud, identidad o pago en tus correos.</p>
+<h3>6. Lo que no recopilamos</h3>
+<p>No recopilamos tu ubicación, contactos, identificador publicitario ni lo que haces en la app. No usamos herramientas de publicidad, analítica o seguimiento de terceros. No te rastreamos entre apps.</p>
+<h3>7. Límite de edad</h3>
+<p>La app es para personas de 18 años o más. Los cálculos se basan en fórmulas pensadas para adultos.</p>
+<h3>8. Seguridad</h3>
+<p>Tus datos están protegidos por el cifrado de tu iPhone. Usar un bloqueo de pantalla es la base de esa protección. Los archivos de copia se cifran con una contraseña que tú eliges. No conocemos esa contraseña, así que si la olvidas no se podrá abrir el archivo.</p>
+<h3>9. Eliminación</h3>
+<ul><li><strong>Datos en la app:</strong> Perfil &gt; Eliminar todos mis datos. Desinstalar la app también los elimina.</li><li><strong>Marca del regalo de racha:</strong> Cuando se da el regalo de la racha de 15 días, se escribe una sola marca en el llavero de tu teléfono: "regalo dado". No contiene tu nombre, la fecha ni otra información tuya, no sale de tu teléfono, no se sincroniza con iCloud y no podemos verla. Como el regalo se da una vez por persona, la marca se queda en el teléfono aunque elimines tus datos o desinstales la app.</li><li><strong>Datos escritos en Apple Salud:</strong> Se eliminan en la app Salud.</li><li><strong>Copias:</strong> Tú eliminas las copias del dispositivo y los archivos que creaste.</li><li><strong>Correos de soporte:</strong> Escríbenos para solicitar su eliminación.</li></ul>
+<p>Puedes retirar tu consentimiento en cualquier momento desactivando el acceso a Apple Salud o eliminando tus datos.</p>
+<h3>10. Tus derechos</h3>
+<p>Según la ley turca de protección de datos (KVKK art. 11) y, si estás en la Unión Europea, el RGPD, tienes derecho de acceso, rectificación, supresión, oposición y portabilidad, y puedes reclamar ante tu autoridad de protección de datos. Como no podemos ver los datos de tu teléfono, puedes hacer casi todo esto tú mismo en la app. Para los correos de soporte, escríbenos y responderemos en un máximo de 30 días.</p>
+<h3>11. Cambios</h3>
+<p>Si cambiamos el flujo de datos, te avisaremos en la app antes de que el cambio se aplique.</p>
+<h3>12. Contacto</h3>
+<p>Galip Alp Demirel, Turquía · <a href="mailto:support@bydl.app">support@bydl.app</a></p></section>
+</main>
+<footer>
+<p>Gram'ı Galip Alp Demirel geliştirir · Türkiye · <a href="mailto:support@bydl.app">support@bydl.app</a></p>
+<p>Gram bir takip ve hesaplama aracıdır. Tıbbi tavsiye, teşhis ya da tedavi değildir. 18 yaş ve üzeri içindir.</p>
+</footer>
+</div>
+</body>
+</html>

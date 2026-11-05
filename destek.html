@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Destek · Gram</title>
+<meta name="description" content="Gram destek, sık sorulanlar ve iletişim">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="simge.png">
+<style>
+@font-face{font-family:"Bricolage";src:url(fontlar/BricolageGrotesque.ttf) format("truetype");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+@font-face{font-family:"Instrument";src:url(fontlar/InstrumentSans.ttf) format("truetype");font-weight:400 700;font-stretch:75% 100%;font-display:swap}
+:root{--ground:#F2F4F3;--surface:#FFFFFF;--ink:#101412;--secondary:#5B625E;--rule:#D5DAD7;--mark:#FFF1A8;--paper:#F2F4F3}
+@media (prefers-color-scheme:dark){:root{--ground:#0B0D0C;--surface:#171A19;--ink:#EEF1EF;--secondary:#A3AAA6;--rule:#2B302D;--mark:#5A4B00;--paper:#0B0D0C}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.6 "Instrument",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0}
+.brand{display:flex;align-items:flex-end;gap:8px;color:var(--ink);text-decoration:none;font:800 26px/1 "Bricolage",sans-serif;letter-spacing:-.03em}
+.brand .gram{width:24px;height:26px}
+nav{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:15px}
+nav a{color:var(--secondary);text-decoration:none}
+nav a:hover,nav a[aria-current]{color:var(--ink)}
+.gram .eyes{fill:var(--paper)}
+h1,h2,.display{font-family:"Bricolage",sans-serif;letter-spacing:-.02em}
+h1{font-size:clamp(40px,9vw,64px);line-height:.95;font-weight:800;margin:28px 0 0}
+h2{font-size:26px;line-height:1.15;margin:44px 0 8px}
+h3{font-size:18px;margin:30px 0 4px}
+h4{font-size:16px;margin:22px 0 4px}
+p,li{color:var(--ink)}
+.muted{color:var(--secondary);font-size:15px}
+a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:3px}
+.rule{height:7px;background:var(--ink);border-radius:2px;margin:18px 0 22px}
+mark{background:var(--mark);color:inherit;padding:0 3px;border-radius:3px}
+code{font:inherit}
+.table{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+th{font-weight:600}
+.langs{display:flex;gap:8px;margin:8px 0 0;flex-wrap:wrap}
+.langs a{font-size:14px;text-decoration:none;padding:6px 12px;border-radius:999px;background:var(--surface)}
+section.lang{scroll-margin-top:16px}
+footer{margin:64px 0 0;padding:22px 0 40px;border-top:1px solid var(--rule);font-size:14px;color:var(--secondary)}
+footer p{color:var(--secondary);margin:4px 0}
+/* Ana sayfa */
+.hero{display:flex;flex-direction:column;align-items:center;padding:36px 0 8px}
+.hero .gram{width:120px;height:132px;animation:drop .9s cubic-bezier(.3,1.5,.5,1) both}
+.pan{width:180px;height:7px;border-radius:7px;background:var(--ink)}
+.readout{margin-top:10px;font:800 30px/1 "Bricolage",sans-serif}
+.readout span{font:500 15px "Instrument",sans-serif;color:var(--secondary);margin-left:3px}
+@keyframes drop{from{transform:translateY(-70px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero .gram{animation:none}}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:28px 0}
+.point{background:var(--surface);border-radius:20px;padding:18px}
+.point strong{display:block;font:700 19px/1.2 "Bricolage",sans-serif;margin-bottom:6px}
+.point p{margin:0;color:var(--secondary);font-size:15px;line-height:1.5}
+.soon{display:inline-block;margin-top:6px;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--ground);font-weight:600;font-size:15px}
+.faq h3{margin-top:26px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="index.html"><svg class="gram" viewBox="0 0 100 110" aria-hidden="true"><g fill="currentColor"><circle cx="50" cy="14.5" r="13.5"/><path d="M42.5 20H57.5V28Q57.5 37 70 37H30Q42.5 37 42.5 28Z"/><path d="M33 36H67C80 36 85 43 87 54C90 67 95 80 95 93C95 103 90 109 79 109H21C10 109 5 103 5 93C5 80 10 67 13 54C15 43 20 36 33 36Z"/></g><g class="eyes"><ellipse cx="39" cy="73" rx="5.5" ry="9"/><ellipse cx="61" cy="73" rx="5.5" ry="9"/></g></svg>gram</a><nav><a href="gizlilik.html">Gizlilik</a><a href="kosullar.html">Koşullar</a><a href="destek.html" aria-current=page>Destek</a></nav></header>
+<main>
+<h1>Destek</h1><div class="rule"></div><div class="langs"><a href="#tr">Türkçe</a><a href="#en">English</a><a href="#es">Español</a></div><section class="lang faq" id="tr" lang="tr"><h2>Destek</h2><p>Bir sorun mu var, bir fikrin mi? <a href="mailto:support@bydl.app">support@bydl.app</a> adresine yaz, döneriz.</p><h3>Verilerim nerede duruyor?</h3><p>Yemek günlüğün, kilon, ölçülerin ve antrenmanların yalnızca telefonunda durur. Hesap yok, sunucumuz yok. Telefonun kendi yedeği bu verileri de yedekler.</p><h3>Verilerimi nasıl silerim?</h3><p>Profil &gt; Tüm verilerimi sil. Uygulamayı telefondan kaldırmak da verileri siler. Yalnızca seri hediyesinin verildiğini gösteren, seni tanıtmayan tek bir işaret telefonda kalır.</p><h3>Aboneliğimi nasıl iptal ederim?</h3><p>Profil &gt; Aboneliği yönet ya da iPhone Ayarlar &gt; adın &gt; Abonelikler. İptal edersen ödenmiş dönemin sonuna kadar Pro açık kalır.</p><h3>Pro&#x27;yu yeni telefonumda nasıl açarım?</h3><p>Aynı Apple hesabıyla giriş yap, Pro sayfasında "Satın alımları geri yükle"ye dokun.</p><h3>Seri hediyesi nasıl işler?</h3><p>Bir yemek, bir bardak su ya da bir set yazdığın her gün seriye sayılır. Seri ilk kez 15 güne ulaşınca Pro 7 gün ücretsiz açılır. Kişi başı bir kez verilir, kart istemez, kendiliğinden biter.</p><h3>Bir ürünün değeri yanlış görünüyor.</h3><p>Paketli ürünlerin bir kısmı gönüllülerin girdiği veridir; kartta kaynağı yazar. Paketteki etiketle karşılaştır, gerekirse "Kendin ekle" ile doğru değeri yaz. Ürünün adını ya da barkodunu bize yazarsan düzeltiriz.</p><h3>İade istiyorum.</h3><p>Ödemeleri Apple alır, iadeyi de Apple yönetir: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></p></section><section class="lang faq" id="en" lang="en"><h2>Support</h2><p>Found a problem or have an idea? Email <a href="mailto:support@bydl.app">support@bydl.app</a> and we'll get back to you.</p><h3>Where is my data?</h3><p>Your food diary, weight, measurements and workouts stay only on your phone. No account, no server. Your phone's own backup includes them.</p><h3>How do I delete my data?</h3><p>Profile &gt; Delete all my data. Removing the app deletes it too. Only a single mark showing that the streak gift was given stays on the phone; it doesn't identify you.</p><h3>How do I cancel my subscription?</h3><p>Profile &gt; Manage subscription, or iPhone Settings &gt; your name &gt; Subscriptions. Pro stays on until the end of the paid period.</p><h3>How do I get Pro on a new phone?</h3><p>Sign in with the same Apple Account and tap "Restore Purchases" on the Pro screen.</p><h3>How does the streak gift work?</h3><p>Every day you log a food, a glass of water or a set counts. The first time your streak reaches 15 days, Pro opens free for 7 days. Once per person, no card, it ends by itself.</p><h3>A product&#x27;s values look wrong.</h3><p>Some packaged products come from volunteer data; the card shows the source. Compare with the label on the package and use "Add your own" if needed. Send us the product name or barcode and we'll fix it.</p><h3>I want a refund.</h3><p>Apple takes payments and handles refunds: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></p></section><section class="lang faq" id="es" lang="es"><h2>Soporte</h2><p>¿Un problema o una idea? Escribe a <a href="mailto:support@bydl.app">support@bydl.app</a> y te respondemos.</p><h3>¿Dónde están mis datos?</h3><p>Tu diario de comidas, tu peso, tus medidas y tus entrenamientos se quedan solo en tu teléfono. Sin cuenta, sin servidor.</p><h3>¿Cómo elimino mis datos?</h3><p>Perfil &gt; Eliminar todos mis datos. Desinstalar la app también los elimina. Solo queda una marca que indica que se dio el regalo de racha; no te identifica.</p><h3>¿Cómo cancelo mi suscripción?</h3><p>Perfil &gt; Gestionar suscripción, o Ajustes del iPhone &gt; tu nombre &gt; Suscripciones.</p><h3>¿Cómo activo Pro en un teléfono nuevo?</h3><p>Inicia sesión con la misma cuenta de Apple y toca "Restaurar compras" en la pantalla de Pro.</p><h3>¿Cómo funciona el regalo de racha?</h3><p>Cuenta cada día que registras una comida, un vaso de agua o una serie. La primera vez que tu racha llega a 15 días, Pro se abre gratis 7 días. Una vez por persona, sin tarjeta, termina solo.</p><h3>Los valores de un producto parecen incorrectos.</h3><p>Algunos productos vienen de datos de voluntarios; la tarjeta muestra la fuente. Compáralos con la etiqueta del paquete. Envíanos el nombre o el código de barras y lo corregimos.</p><h3>Quiero un reembolso.</h3><p>Apple cobra los pagos y gestiona los reembolsos: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></p></section>
+<h2>Veri kaynakları ve lisanslar</h2>
+<ul>
+<li>Besin verisi: USDA FoodData Central (kamu malı, CC0 1.0). fdc.nal.usda.gov</li>
+<li>Paketli ürünler ve barkodlar: Open Food Facts katkıcıları, <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL) 1.0</a>. openfoodfacts.org. Bu veriden türettiğimiz ürün tablosu da ODbL ile paylaşılır; istemek için yaz.</li>
+<li>Bazı tarifler ABD Ulusal Sağlık Enstitüleri (NIH NHLBI) yayınlarından uyarlanmıştır. Bu kurumlar uygulamayı onaylamaz ya da desteklemez.</li>
+<li>Yazı tipleri: Bricolage Grotesque ve Instrument Sans, <a href="fontlar/OFL-BricolageGrotesque.txt">SIL Open Font License 1.1</a>.</li>
+</ul>
+
+</main>
+<footer>
+<p>Gram'ı Galip Alp Demirel geliştirir · Türkiye · <a href="mailto:support@bydl.app">support@bydl.app</a></p>
+<p>Gram bir takip ve hesaplama aracıdır. Tıbbi tavsiye, teşhis ya da tedavi değildir. 18 yaş ve üzeri içindir.</p>
+</footer>
+</div>
+</body>
+</html>
